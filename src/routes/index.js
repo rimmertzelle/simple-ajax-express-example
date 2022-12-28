@@ -1,10 +1,11 @@
 // TODO: implement HTTPS
-const express = require("express");
+import express from 'express';
+import { getIndex, getNames } from '../controllers/indexController.js';
+
 const router = express.Router();
-const indexController = require("../controllers/indexController");
 
-//all routes
-router.get("/", indexController.getIndex);
-router.get("/names", indexController.getNames);
+// all routes
+router.get('/', getIndex);
+router.get('/names', getNames);
 
-module.exports = router;
+export default router;

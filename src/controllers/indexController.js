@@ -1,7 +1,7 @@
-exports.getIndex = (req, res) => {
-  res.render("index");
+export const getIndex = (req, res) => {
+  res.render('index');
 };
 
-exports.getNames = (req, res) => {
-  res.json({ user: "tobi" });
+export const getNames = (req, res) => {
+  res.json({ user: 'tobi' });
 };

@@ -1,15 +1,16 @@
 console.log('initialising');
-window.addEventListener("load", init);
 
 function init() {
-  console.log("in init");
-  fetch("./names", {
-    method: "get",
+  console.log('in init');
+  fetch('./names', {
+    method: 'get',
   })
-    .then(function (response) {
+    .then((response) => {
       console.log(response);
     })
-    .catch(function (error) {
+    .catch((error) => {
       console.log(error);
     });
 }
+
+window.addEventListener('load', init);
